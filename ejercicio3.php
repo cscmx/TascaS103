@@ -7,16 +7,14 @@ Si tenim [“hola”, “Php”, “Html”] retornarà true si preguntem per �
 */
 
 $myArray = ["hola", "Php", "Html"];
-$findMe = "o";
+$findMe = "l";
 
 echo "BUSCANDO: ". $findMe.PHP_EOL;
 
 function searchingChar (string $word, string $chartofind) {
 
-    if (str_contains($word, $chartofind)){
-        return true;
-    }
-    
+    return str_contains($word, $chartofind);
+
 }
 
 function searchingInArray (array $anArray, string $aLetter){
