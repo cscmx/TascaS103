@@ -11,13 +11,14 @@ $myarray = [1,2,3,4,5,6];
 
 echo "La medida del array es: " .count($myarray).PHP_EOL;
 
-$index = rand(0,count($myarray));
+$index = rand(0,count($myarray)-1);
 unset($myarray[$index]);
+$myarray = array_values($myarray);
 
 echo "La suma total del array es: ".count($myarray) .PHP_EOL;
 
 echo "Los elementos actuales del array son: ".PHP_EOL;
-foreach ($myarray as $number){
-    echo $number.PHP_EOL;
+foreach ($myarray as $indice => $number){
+    echo "indice: $indice - valor $number".PHP_EOL;
 }
 ?>
