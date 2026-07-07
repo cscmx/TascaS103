@@ -16,6 +16,7 @@ function notaMediaAlumno(array $notasAlumnos)
 {
     $globalNotadeAlumno = [];
     $notaGlobalGeneral = 0;
+    $notaMediaGlobal = 0;
     $totalAlumno = 0;
     foreach($notasAlumnos as $alumno => $notas){
         //echo sizeof($notas).PHP_EOL;
