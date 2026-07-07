@@ -1,0 +1,14 @@
+<?php
+/*
+Crea un array, afegeix-li 5 nombres enters i després mostrals per pantalla d’un en un.
+*/
+
+$arrayNumbers = [1,2,3,4,5];
+
+
+for ($int = 0; $int<count($arrayNumbers); $int++) {
+    echo $arrayNumbers[$int].PHP_EOL;
+}
+
+
+?>
