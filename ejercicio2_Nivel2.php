@@ -15,16 +15,21 @@ $notasAlumnos = [
 function notaMediaAlumno(array $notasAlumnos)
 {
     $globalNotadeAlumno = [];
+    $notaGlobalGeneral = 0;
     $totalAlumno = 0;
     foreach($notasAlumnos as $alumno => $notas){
         //echo sizeof($notas).PHP_EOL;
         $totalAlumno = array_sum($notas)/sizeof($notas);
         $globalNotadeAlumno[$alumno] = $totalAlumno;
+        echo "Nota del alumno ". $alumno . " es ". $totalAlumno.PHP_EOL;
     }
     foreach ($globalNotadeAlumno as $alumno => $nota){
-        
+        $notaGlobalGeneral += $nota;
+        $notaMediaGlobal = $notaGlobalGeneral / sizeof($globalNotadeAlumno);
     }
-    return $globalNotadeAlumno;
+    
+
+    return "Nota media global todo el alumnado = " . $notaMediaGlobal;
 
 }
 
